@@ -1,4 +1,4 @@
-export type View = 'dashboard' | 'collaborators' | 'records' | 'ai-assistant';
+export type View = 'dashboard' | 'collaborators' | 'records' | 'ai-assistant' | 'impact-analysis' | 'documentation';
 
 export enum CollaboratorStatus {
   ACTIVO = 'Activo',

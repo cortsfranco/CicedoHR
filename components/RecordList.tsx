@@ -298,17 +298,17 @@ const RecordList: React.FC<RecordListProps> = ({ records, collaborators, onAddRe
                         <MultiSelectDropdown options={collaboratorOptions} selected={collaboratorFilters} onChange={setCollaboratorFilters} placeholder="Filtrar por Colaborador" />
                     </div>
                 </div>
-                <div className="flex items-center gap-2 w-full md:w-auto flex-shrink-0">
+                <div className="flex items-center gap-2 w-full md:w-auto flex-wrap justify-start md:justify-end">
                     <input type="file" ref={importFileRef} onChange={handleFileImport} className="hidden" accept=".csv" />
-                    <button onClick={handleImportClick} className="flex items-center py-2 px-4 bg-white text-slate-700 border border-slate-300 font-semibold rounded-lg shadow-sm hover:bg-slate-50 transition-colors whitespace-nowrap w-full justify-center md:w-auto">
+                    <button onClick={handleImportClick} className="flex items-center py-2 px-4 bg-white text-slate-700 border border-slate-300 font-semibold rounded-lg shadow-sm hover:bg-slate-50 transition-colors whitespace-nowrap">
                         <ImportIcon className="w-5 h-5 mr-2" />
                         Importar
                     </button>
-                    <button onClick={handleExport} className="flex items-center py-2 px-4 bg-white text-slate-700 border border-slate-300 font-semibold rounded-lg shadow-sm hover:bg-slate-50 transition-colors whitespace-nowrap w-full justify-center md:w-auto">
+                    <button onClick={handleExport} className="flex items-center py-2 px-4 bg-white text-slate-700 border border-slate-300 font-semibold rounded-lg shadow-sm hover:bg-slate-50 transition-colors whitespace-nowrap">
                         <ExportIcon className="w-5 h-5 mr-2" />
                         Exportar
                     </button>
-                    <button onClick={() => setIsAddModalOpen(true)} className="w-full justify-center md:w-auto py-2 px-4 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition-colors whitespace-nowrap">
+                    <button onClick={() => setIsAddModalOpen(true)} className="py-2 px-4 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition-colors whitespace-nowrap">
                         Añadir Registro
                     </button>
                 </div>

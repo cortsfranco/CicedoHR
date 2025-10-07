@@ -4,6 +4,8 @@ import Dashboard from './components/Dashboard';
 import CollaboratorList from './components/CollaboratorList';
 import RecordList from './components/RecordList';
 import AIAssistant from './components/AIAssistant';
+import ImpactAnalysis from './components/ImpactAnalysis';
+import Documentation from './components/Documentation';
 import Header from './components/Header';
 import { View, Collaborator, HRRecord, RecordType, CollaboratorStatus } from './types';
 import { COLLABORATORS_DATA, RECORDS_DATA } from './constants';
@@ -136,8 +138,10 @@ const App: React.FC = () => {
 
   const viewTitles: { [key in View]: string } = {
     dashboard: 'Panel Principal',
+    'impact-analysis': 'Análisis de Impacto',
     collaborators: 'Colaboradores',
     records: 'Registros',
+    documentation: 'Manual de Usuario',
     'ai-assistant': 'Asistente IA',
   };
 
@@ -145,10 +149,14 @@ const App: React.FC = () => {
     switch (currentView) {
       case 'dashboard':
         return <Dashboard collaborators={collaborators} records={records} />;
+      case 'impact-analysis':
+        return <ImpactAnalysis collaborators={collaborators} records={records} />;
       case 'collaborators':
         return <CollaboratorList collaborators={collaborators} onAddCollaborator={handleAddCollaborator} onEditCollaborator={handleEditCollaborator} onDeleteCollaborator={handleDeleteCollaborator} onImportCollaborators={handleImportCollaborators} onDeleteSelectedCollaborators={handleDeleteSelectedCollaborators} />;
       case 'records':
         return <RecordList records={records} collaborators={collaborators} onAddRecord={handleAddRecord} onEditRecord={handleEditRecord} onDeleteRecord={handleDeleteRecord} onImportRecords={handleImportRecords} onDeleteSelectedRecords={handleDeleteSelectedRecords} />;
+      case 'documentation':
+        return <Documentation />;
       case 'ai-assistant':
         return <AIAssistant collaborators={collaborators} records={records} />;
       default:

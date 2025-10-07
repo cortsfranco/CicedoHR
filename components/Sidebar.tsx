@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from '../types';
-import { DashboardIcon, RecordsIcon, AIIcon, CollaboratorsIcon, CloseIcon } from './Icons';
+import { DashboardIcon, RecordsIcon, AIIcon, CollaboratorsIcon, CloseIcon, ImpactIcon, DocumentationIcon } from './Icons';
 
 interface SidebarProps {
   currentView: View;
@@ -61,11 +61,17 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, setCurrentView, isOpen, 
             <NavItem viewName="dashboard" label="Panel Principal" currentView={currentView} setCurrentView={setCurrentView}>
               <DashboardIcon />
             </NavItem>
+             <NavItem viewName="impact-analysis" label="Análisis de Impacto" currentView={currentView} setCurrentView={setCurrentView}>
+              <ImpactIcon />
+            </NavItem>
             <NavItem viewName="collaborators" label="Colaboradores" currentView={currentView} setCurrentView={setCurrentView}>
               <CollaboratorsIcon />
             </NavItem>
             <NavItem viewName="records" label="Registros" currentView={currentView} setCurrentView={setCurrentView}>
               <RecordsIcon />
+            </NavItem>
+             <NavItem viewName="documentation" label="Documentación" currentView={currentView} setCurrentView={setCurrentView}>
+              <DocumentationIcon />
             </NavItem>
             <NavItem viewName="ai-assistant" label="Asistente IA" currentView={currentView} setCurrentView={setCurrentView}>
               <AIIcon />
