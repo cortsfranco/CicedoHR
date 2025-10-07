@@ -1,0 +1,5 @@
+{
+  "name": "HR AI Dashboard",
+  "description": "An intelligent dashboard for HR management that visualizes key metrics like hiring, terminations, and sanctions. It features an AI-powered assistant to provide data-driven insights on demand, replacing complex spreadsheets with an intuitive interface.",
+  "requestFramePermissions": []
+}
